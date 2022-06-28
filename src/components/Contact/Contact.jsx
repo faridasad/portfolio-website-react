@@ -1,18 +1,47 @@
-import React from "react";
+import React, {useState} from "react";
+import emailjs from 'emailjs-com';
 import "./contact.scss";
 import { LocationOn, Call, Email, LinkedIn, GitHub, Facebook, Instagram } from '@mui/icons-material'
 
 const Contact = () => {
+  const [isSubmitted, setIsSubmitted] = useState(false)
+
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        "service_6zybi28",
+        "template_zojjtgn",
+        e.target,
+        "PkX4Nz97P7HvevJbI"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          setIsSubmitted(true)
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+
+      e.target.reset();
+  };
+
+
   return (
     <div className="contact" id="contact">
       <h1 className="contact-header">Contact</h1>
       <div className="contact-wrapper">
         <div className="contact-left">
-          <form>
-            <input type="text" placeholder="Your Name" />
-            <input type="email" placeholder="Email" />
-            <textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
-            <input type="submit" value="Send" />
+          <form onSubmit={handleSubmit}>
+            <input type="text" placeholder="Your Name"  name="from_name"/>
+            <input type="email" placeholder="Email"  name="email"/>
+            <input type="tetx" placeholder="Subject"  name="subject"/>
+            <textarea id="" cols="30" rows="10" placeholder="Message" name="message"></textarea>
+            <button type="submit">Send</button>
+            {isSubmitted && "Thanks..."}
           </form>
         </div>
         <div className="contact-right">
