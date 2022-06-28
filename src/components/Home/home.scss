@@ -1,0 +1,59 @@
+.home {
+  background-color: #2b2d2f;
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+
+  .h-left {
+    word-spacing: 0.8em;
+    color: #fff;
+    text-transform: uppercase;
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    flex-direction: column;
+
+    &-introduce-text {
+      font-size: 3rem;
+    }
+
+    &-scrolling-words-container {
+      display: flex;
+      height: 70px;
+      gap: 1em;
+
+      p {
+        font-size: 3em;
+      }
+     
+    }
+
+    &-scrolling-words-box {
+      overflow: hidden;
+      border-radius: 10px;
+  
+
+      &-item {
+        font-size: 50px;
+        color: blueviolet;
+        display: block;
+        animation: slideUp 5s ease-in-out infinite alternate;
+      }
+    }
+  }
+}
+
+@keyframes slideUp{
+
+  50%{
+    transform: translateY(-61px);
+  }
+  100%{
+    transform: translateY(-122px);
+  }
+ 
+  
+}

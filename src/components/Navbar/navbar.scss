@@ -1,0 +1,42 @@
+.navbar {
+    z-index: 999;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+
+    .logo-name {
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 1.3rem;
+        padding: 0 2em;
+
+        a {
+            text-decoration: none;
+        }
+    }
+
+    .nav-links{
+        display: flex;
+        gap: 1.7em;
+
+        li a {
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: .1em;
+            color: rgb(73, 73, 73);
+        }
+    }
+
+    .resume-button{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1em;
+        padding: 0.3em 1em;
+        text-transform: uppercase;
+        cursor: pointer;
+        letter-spacing: .3em;
+    }
+}

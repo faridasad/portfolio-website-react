@@ -1,0 +1,33 @@
+.about {
+    background-color: aquamarine;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+    &-wrapper {
+        min-width: 60%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+    }
+    
+    &-image {
+        border-radius: 7px;
+        width: 400px;
+    }
+
+    &-left {
+
+    }
+
+    &-right{
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        text-align: center;
+        max-width: 40%;
+    }
+
+}
