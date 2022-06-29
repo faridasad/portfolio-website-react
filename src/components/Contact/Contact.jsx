@@ -50,10 +50,10 @@ const Contact = () => {
           <p><span><Email /></span>asadlifaridd@gmail.com</p>
           <div className="line"></div>
           <div className="social-icons">
-            <span><GitHub /></span>
-            <span><LinkedIn /></span>
-            <span><Facebook /></span>
-            <span><Instagram /></span>
+            <a href="https://github.com/faridasad" target="_blank" rel="noreferrer"><span><GitHub /></span></a>
+            <a href="https://www.linkedin.com/in/faridasadli/" target="_blank" rel="noreferrer"><span><LinkedIn /></span></a>
+            <a href="https://www.facebook.com/" target="_blank" rel="noreferrer"><span><Facebook /></span></a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noreferrer"><span><Instagram /></span></a>
           </div>
         </div>
       </div>
